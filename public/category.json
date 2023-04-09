@@ -1,0 +1,22 @@
+[
+    {
+        "categoryName": "Engineering Job",
+        "logo": "https://img.freepik.com/free-icon/profile_318-651103.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=ais",
+        "numJobs": 224
+    },
+    {
+        "categoryName": "Finance",
+        "logo": "https://img.freepik.com/free-icon/budget_318-937313.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=sph",
+        "numJobs": 300
+    },
+    {
+        "categoryName": "Creative Designs",
+        "logo": "https://img.freepik.com/free-icon/bulb_318-937029.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=sph",
+        "numJobs": 100
+    },
+    {
+        "categoryName": "Marketing & Sales",
+        "logo": "https://img.freepik.com/free-icon/email_318-921562.jpg?size=626&ext=jpg&ga=GA1.1.632902743.1676570136&semt=sph",
+        "numJobs": 150
+    }
+]
