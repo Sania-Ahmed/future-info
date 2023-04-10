@@ -1,11 +1,14 @@
 
 import { data } from "autoprefixer";
 import { useLoaderData } from "react-router-dom";
+import { addToDb } from "../../fakedb";
 
 
 const Detail = () => {
  const job = useLoaderData();
- 
+ const adToLocalStorage = (id,title) => {
+    addToDb(id,title)
+ }
 
     return (
         <div className="flex items-center justify-between gap-3 mt-16 ">
@@ -32,7 +35,7 @@ const Detail = () => {
               <p className="text-gray-500 mt-5">Email: {job.email}</p>
               <p className="text-gray-500 mt-5">Location: {job.location}</p>
               </div>
-              <button className='py-2 w-full  px-1 bg-purple-600 text-white font-semibold rounded-md mt-5'>Apply now</button>
+              <button className='py-2 w-full  px-1 bg-purple-600 text-white font-semibold rounded-md mt-5' onClick={() => adToLocalStorage(job.id,job.jobTitle)}>Apply now</button>
 
             </div>
         </div>

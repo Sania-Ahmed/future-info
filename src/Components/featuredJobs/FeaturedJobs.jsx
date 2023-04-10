@@ -8,7 +8,7 @@ const FeaturedJobs = () => {
     useEffect(() => {
         fetch('./job/data.json')
         .then(res => res.json())
-        .then(data => setJobs(data.slice(2)))
+        .then(data => setJobs(data.slice(0,4)))
     },[])
     const handleSeeAll = () =>{
         fetch('./job/data.json')
@@ -21,7 +21,7 @@ const FeaturedJobs = () => {
             <p className='text-gray-500 text-center mt-6'>Explore thousands of job opportunities with all the information you need. Its your future.</p>
             <div className='md:grid grid-cols-2 gap-2 mt-16'>
             {
-             jobs.map(job => <SingleJob job = {job}></SingleJob>)
+             jobs.map(job => <SingleJob key={job.id} job = {job}></SingleJob>)
             }
             </div>
             <div className='flex items-center justify-center'>

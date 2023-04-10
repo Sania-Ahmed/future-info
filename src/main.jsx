@@ -13,6 +13,7 @@ import Applied from './Components/Apllied/Applied';
 import Blog from './Components/Blog/Blog';
 import Detail from './Components/Details/Detail';
 import fetchDataJSON from './data';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,11 +42,16 @@ const router = createBrowserRouter([
       },
       {
         path: 'applied',
-        element: <Applied></Applied>
+        element: <Applied></Applied>,
+        loader : () => fetch('/data.json')
       },
       {
         path: 'blog',
         element: <Blog></Blog>
+      },
+      {
+        path: '*',
+        element:<ErrorPage></ErrorPage>
       }
     ]
   },
