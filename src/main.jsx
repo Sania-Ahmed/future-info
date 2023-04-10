@@ -11,6 +11,8 @@ import Home from './Components/Home/Home';
 import Statictis from './Components/Statictis/Statictis';
 import Applied from './Components/Apllied/Applied';
 import Blog from './Components/Blog/Blog';
+import Detail from './Components/Details/Detail';
+import fetchDataJSON from './data';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+       path: 'job/:id',
+       element:<Detail></Detail>,
+       loader: () => fetch('data.json')
       },
       {
         path: 'statictis',

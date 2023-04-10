@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleJob = ({job}) => {
-    const {logo, jobTitle , companyName , location , fullOrPartTime, remoteOrOnsite, salary , } = job;
+    const {id,logo, jobTitle , companyName , location , fullOrPartTime, remoteOrOnsite, salary , } = job;
     return (
         <div className='border border-slate-200 rounded-md py-3 px-3'>
             <img className='w-20 h-20' src={logo} alt="" />
@@ -17,7 +18,7 @@ const SingleJob = ({job}) => {
             <p className='flex items-center gap-2'> <img className='w-4 h-4'src="https://img.freepik.com/free-icon/coin_318-130572.jpg?size=626&ext=jpg&ga=GA1.2.632902743.1676570136&semt=ais" alt="" /> Salary: {salary}</p>
             </div>
             
-            <button className='py-1 px-2 bg-purple-500 text-white font-medium mt-3 rounded-md'>View Details</button>
+            <Link to={`/job/${id}`}><button className='py-1 px-2 bg-purple-500 text-white font-medium mt-3 rounded-md'>View Details</button></Link>
         </div>
     );
 };
