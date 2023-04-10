@@ -25,12 +25,36 @@ const Applied = () => {
         setCart(selected);
     }, [jobs])
     console.log(cart);
+    const handleOnSiteOrRemote = () => {
+       const onsites = cart.filter(os => os.remoteOrOnsite === "Onsite") ;
+       if(onsites){
+           setCart(onsites);
+       }
+       else{
+        alert('no onsite job added')
+       }
+    }
+    const handleOnSiteOrRemote2 = () => {
+       const Remotes = cart.filter(os => os.remoteOrOnsite === "Remote") ;
+       if(Remotes){
+           setCart(Remotes);
+       }
+       else{
+        alert('no remote jobs added')
+       }
+    }
 
     return (
+        <div>
+            <div className='flex justify-end mt-8 gap-5'>
+         <button className='py-2 px-4 text-purple-500 border border-purple-600 rounded-md font-medium' onClick={() => handleOnSiteOrRemote()}>Onsite</button>
+         <button className='py-2 px-4 text-purple-500 border border-purple-600 rounded-md font-medium' onClick={handleOnSiteOrRemote2}>Remote</button>
+            </div>
         <div className='mt-28'>
             {
                 cart.map( jb => <SelectedJobs key={jb.id} selected ={jb}></SelectedJobs>)
             }
+        </div>
         </div>
     );
 };

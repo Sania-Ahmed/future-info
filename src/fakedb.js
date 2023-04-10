@@ -6,6 +6,9 @@ const addToDb = (id, title) => {
     if (!quantity) {
         JobCart[id] = title;
     }
+    else{
+        alert('already added')
+    }
    
     localStorage.setItem('job-cart', JSON.stringify(JobCart));
 }
