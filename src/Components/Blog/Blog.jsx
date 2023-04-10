@@ -13,7 +13,6 @@ const Blog = () => {
             <h2 className='text-3xl font-bold text-center text-purple-400 mt-5'>What is useMemo in react?</h2>
           <p className='text-xl text-gray-500 mt-5'>
           React has a  hook called useMemo that  memoize expensive functions , to avoid calling them on every render. Devloper simple pass in a function and an array of inputs and useMemo will only recompute the memoized value when one of the inputs has changed. </p>
-
         </div>
     );
 };
