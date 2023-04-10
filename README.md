@@ -6,6 +6,7 @@ b7a9-career-hub-Sania-Ahmed created by GitHub Classroom
 * After clicking on view details , ridirect to details page .
 * after clicking on apply now button set information on local storage . And display selected jobs in applied jobs.
 * filter using remote and onsite . 
+* shared the view details among two components 
 
 # LIVE LINK 
 
