@@ -6,12 +6,12 @@ const FeaturedJobs = () => {
     const [jobs, setJobs] = useState([])
     
     useEffect(() => {
-        fetch('data.json')
+        fetch('./job/data.json')
         .then(res => res.json())
         .then(data => setJobs(data.slice(2)))
     },[])
     const handleSeeAll = () =>{
-        fetch('data.json')
+        fetch('./job/data.json')
         .then(res => res.json())
         .then(data => setJobs(data))
     }
