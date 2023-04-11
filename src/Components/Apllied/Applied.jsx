@@ -5,6 +5,7 @@ import SelectedJobs from '../SelectedJobs/SelectedJobs';
 const Applied = () => {
     const [jobs,setJobs] = useState([])
     const [cart, setCart] = useState([])
+    const [filterJob , setFilterJob] = useState([])
     useEffect(()=>{
         fetch('/data.json')
         .then(res => res.json())
@@ -23,21 +24,24 @@ const Applied = () => {
         }  
         console.log(selected)
         setCart(selected);
+        setFilterJob(selected);
     }, [jobs])
     console.log(cart);
     const handleOnSiteOrRemote = () => {
+        
        const onsites = cart.filter(os => os.remoteOrOnsite === "Onsite") ;
        if(onsites){
-           setCart(onsites);
+           setFilterJob(onsites);
        }
        else{
         alert('no onsite job added')
        }
     }
     const handleOnSiteOrRemote2 = () => {
+        
        const Remotes = cart.filter(os => os.remoteOrOnsite === "Remote") ;
        if(Remotes){
-           setCart(Remotes);
+           setFilterJob(Remotes);
        }
        else{
         alert('no remote jobs added')
@@ -52,7 +56,7 @@ const Applied = () => {
             </div>
         <div className='mt-28'>
             {
-                cart.map( jb => <SelectedJobs key={jb.id} selected ={jb}></SelectedJobs>)
+                filterJob.map( jb => <SelectedJobs key={jb.id} selected ={jb}></SelectedJobs>)
             }
         </div>
         </div>

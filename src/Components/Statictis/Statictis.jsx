@@ -46,6 +46,12 @@ const data = [
       pv: 4300,
       amt: 2100,
     },
+    {
+      name: 'assignment-8',
+      marks: 60,
+      pv: 4300,
+      amt: 2100,
+    }
   ];
 
 const Statictis = () => {
@@ -53,7 +59,7 @@ const Statictis = () => {
         <div className=' mt-14'>
             <h2 className='text-4xl font-bold text-center text-purple-400'>MY STATISTICS</h2>
             <AreaChart
-          width={900}
+          width={1000}
           height={400}
           data={data}
           margin={{
