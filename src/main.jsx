@@ -27,7 +27,7 @@ const router = createBrowserRouter([
        path: 'job/:id',
        element:<Detail></Detail>,
        loader: async({params}) => {
-        const details = await fetch('data.json') 
+        const details = await fetch('/data.json') 
         const mainDt = await details.json()
         const job = mainDt.find(jb => jb.id == params.id)
         console.log(job)

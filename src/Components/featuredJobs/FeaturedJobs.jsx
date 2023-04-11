@@ -11,7 +11,7 @@ const FeaturedJobs = () => {
         .then(data => setJobs(data.slice(0,4)))
     },[])
     const handleSeeAll = () =>{
-        fetch('./job/data.json')
+        fetch( './job/data.json')
         .then(res => res.json())
         .then(data => setJobs(data))
     }

@@ -5,7 +5,7 @@ import Singlecategory from '../SingleCategory/Singlecategory';
 const JobsCategory = () => {
     const [category , setCategory] = useState([])
     useEffect(() => {
-        fetch('category.json')
+        fetch('/category.json')
         .then(res => res.json())
         .then( data => setCategory(data))
     },[])
